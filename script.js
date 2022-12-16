@@ -6,7 +6,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 
-// Snake delarna
+// Snake
 class SnakePart {
   constructor(x, y) {
     this.x = x;
@@ -28,7 +28,7 @@ let headY = 10;
 const snakeParts = [];
 let tailLength = 2;
 
-// äpplet
+// Första äpplet
 let appleX = 5;
 let appleY = 5;
 
@@ -71,7 +71,7 @@ function drawGame() {
   setTimeout(drawGame, 1000 / speed);
 }
 
-//Om man dör
+//hur man dör 
 function isGameOver() {
   let gameOver = false;
 
@@ -97,7 +97,7 @@ function isGameOver() {
       break;
     }
   }
-
+  // om man dör 
   if (gameOver) {
     ctx.fillStyle = "white";
     ctx.font = "50px Helvetica";
@@ -136,6 +136,7 @@ function clearScreen() {
 
 // Snake
 function drawSnake() {
+  //Kroppen 
   ctx.fillStyle = "green";
   for (let i = 0; i < snakeParts.length; i++) {
     let part = snakeParts[i];
@@ -146,7 +147,7 @@ function drawSnake() {
   while (snakeParts.length > tailLength) {
     snakeParts.shift();
   }
-
+  //huvudet 
   ctx.fillStyle = "blue";
   ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
 }
@@ -208,7 +209,7 @@ function keyDown(event) {
     inputsYVelocity = 0;
     inputsXVelocity = 1;
   }
-
+    // "R" för att starta om 
   if (event.keyCode == 82) {
     onclick = window.location.reload();
   }
