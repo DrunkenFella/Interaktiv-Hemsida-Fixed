@@ -2,10 +2,11 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, red, blue, green) left/400% 100%;
-    animation: f 4s infinite alternate linear;
+    background: linear-gradient(90deg, red, blue, green) left/200% 100%;
+    animation: f 10s infinite alternate linear;
     z-index: -666;
     min-height: calc(100vh - 16px);
+    background-image: url(images/ryan.png);
 }
 
 @keyframes f {
@@ -20,6 +21,7 @@ canvas {
 }
 
 body {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +33,7 @@ h1 {
     border-radius: 40px;
     margin: 10;
     box-shadow: 0px 20px 60px;
+    background-color: white;
 }
 
 button {
@@ -44,5 +47,5 @@ h2 {
     border-radius: 40px;
     margin: 25px;
     box-shadow: 10px 10px 60px;
+    background-color: white;
 }
-

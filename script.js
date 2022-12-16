@@ -1,10 +1,8 @@
 console.log('Hello, nothing to see here move along')
 
-
 //hur spelet ska se ut
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
-
 
 // Snake
 class SnakePart {
@@ -209,8 +207,9 @@ function keyDown(event) {
     inputsYVelocity = 0;
     inputsXVelocity = 1;
   }
-    // "R" för att starta om 
+  // "r" för att starta om 
   if (event.keyCode == 82) {
+    //r = 82
     onclick = window.location.reload();
   }
 }
