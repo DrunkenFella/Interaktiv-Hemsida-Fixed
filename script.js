@@ -122,8 +122,8 @@ function isGameOver() {
 //score skriva ut
 function drawScore() {
   ctx.fillStyle = "white";
-  ctx.font = "10px Helvetica"
-  ctx.fillText("Score " + score, canvas.width - 40, 15);
+  ctx.font = "15px Helvetica"
+  ctx.fillText("Score " + score, canvas.width - 60, 20);
 }
 
 // uppdateringen av skärmen
